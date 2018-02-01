@@ -38,6 +38,7 @@ class App < Sinatra::Base
     else
       @answer = "Cannot compute!"
     end
+    "#{@answer}"
   end
 
 end
