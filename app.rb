@@ -19,6 +19,7 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     @count = params[:number].to_i
     raise @count.inspect
+    raise params[:phrase].inspect
     @count.times do
       "#{params[:phrase]}"
     end
