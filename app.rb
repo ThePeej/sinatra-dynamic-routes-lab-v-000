@@ -37,6 +37,7 @@ class App < Sinatra::Base
       @answer = params[:number1].to_i % params[:number2].to_i
     else
       @answer = "Cannot compute!"
+    end
   end
 
 end
