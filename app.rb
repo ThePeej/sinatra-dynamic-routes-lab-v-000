@@ -6,9 +6,13 @@ class App < Sinatra::Base
   get '/' do
     "<h1>Dynamic Routes Lab</h1>"
   end
-  
+
   get '/reversename/:name' do
     "#{params[:name].reverse}"
+  end
+
+  get '/square/:number' do
+    "#{params[:number]^^2}"
   end
 
 end
