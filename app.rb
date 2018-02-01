@@ -25,15 +25,15 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     case params[:operation]
-    when add
+    when "add"
       @answer = params[:number1].to_i + params[:number2].to_i
-    when subtract
+    when "subtract"
       @answer = params[:number1].to_i - params[:number2].to_i
-    when mulitply
+    when "mulitply"
       @answer = params[:number1].to_i * params[:number2].to_i
-    when divide
+    when "divide"
       @answer = params[:number1].to_i / params[:number2].to_i
-    when mod
+    when "mod"
       @answer = params[:number1].to_i % params[:number2].to_i
     else
       @answer = "Cannot compute!"
